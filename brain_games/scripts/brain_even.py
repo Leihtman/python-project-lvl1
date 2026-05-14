@@ -1,5 +1,5 @@
-from enum import Enum
 import random
+from enum import Enum
 
 import prompt
 
@@ -8,8 +8,10 @@ class UserValidAnswers(Enum):
     YES = "yes"
     NO = "no"
 
+
 def is_even(number: int):
     return number % 2 == 0
+
 
 def calculate_result(number: int):
     return UserValidAnswers.YES.value if is_even(number) else UserValidAnswers.NO.value
