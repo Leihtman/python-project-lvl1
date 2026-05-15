@@ -35,7 +35,7 @@ def main():
         )
         correct_answer = numbers_list[position_to_hide]
 
-        expression = f"{list_with_hided_number}"
+        expression = ' '.join(str(value) for value in list_with_hided_number)
         print_question(expression)
 
         player_answer = request_user_answer()
