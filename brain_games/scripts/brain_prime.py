@@ -11,32 +11,25 @@ from brain_games.cli import (
 from brain_games.integer_helper import (
     make_arithmetic_progression,
     give_list_with_hided_number,
+    is_prime,
 )
 
-NUMBERS_COUNT = 10
-MIN_STEP = 2
-MAX_STEP = 5
-MAX_FIRST_NUMBER = 100
+MIN_NUMBER = 1
+MAX_NUMBER = 600
+YES_ANSWER = "yes"
+NO_ANSWER = "no"
 
 
 def main():
     player_name = welcome_and_give_name()
-    print("What number is missing in the progression?")
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     correct_attempts_to_win = 3
 
     while correct_attempts_to_win > 0:
-        position_to_hide = random.randint(0, NUMBERS_COUNT - 1)
-        first_number = random.randint(0, MAX_FIRST_NUMBER)
-        step = random.randint(MIN_STEP, MAX_STEP)
+        number = random.randint(MIN_NUMBER, MAX_NUMBER)
 
-        numbers_list = make_arithmetic_progression(first_number, step, NUMBERS_COUNT)
-        list_with_hided_number = give_list_with_hided_number(
-            numbers_list, position_to_hide, mask_value=".."
-        )
-        correct_answer = numbers_list[position_to_hide]
-
-        expression = " ".join(str(value) for value in list_with_hided_number)
-        print_question(expression)
+        correct_answer = YES_ANSWER if is_prime(number) else NO_ANSWER
+        print_question(number)
 
         player_answer = request_user_answer()
 
