@@ -13,8 +13,8 @@
 
 [asciinema brain-calc Failed play](https://asciinema.org/a/QSABu7bQyyV7y6AH)
 
-[asciinema brain-gcd Succes Play]()
+[asciinema brain-gcd Succes Play](https://asciinema.org/a/cicAaPAJnaMXfL5N)
 
-[asciinema brain-gcd Failed Play]()
+[asciinema brain-gcd Failed Play](https://asciinema.org/a/9LHPpmiLqPdzZMJr)
 
 
