@@ -8,29 +8,30 @@ from brain_games.cli import (
     welcome_and_give_name,
     wrong_answer_feedback,
 )
-from brain_games.integer_helper import is_even
+from brain_games.integer_helper import calc
 
-YES_ANSWER = "yes"
-NO_ANSWER = "no"
 MIN_NUMBER = 1
-MAX_NUMBER = 100
+MAX_NUMBER = 25
+OPERATORS = ["+", "-", "*"]
 
 
 def main():
     player_name = welcome_and_give_name()
-    print(
-        f'Answer "{YES_ANSWER}" if the number is even, otherwise answer "{NO_ANSWER}".'
-    )
+    print("What is the result of the expression?")
     correct_attempts_to_win = 3
 
     while correct_attempts_to_win > 0:
-        random_number = random.randint(1, 100)
+        operand_1 = random.randint(1, 100)
+        operand_2 = random.randint(1, 100)
+        operator = OPERATORS[random.randint(0, 2)]
+        expression = f"{operand_1} {operator} {operand_2}"
 
-        print_question(f"{random_number}")
+        print_question(expression)
+
         player_answer = request_user_answer()
-        correct_answer = YES_ANSWER if is_even(random_number) else NO_ANSWER
+        correct_answer = calc(operator, operand_1, operand_2)
 
-        if player_answer == correct_answer:
+        if player_answer == str(correct_answer):
             correct_attempts_to_win -= 1
             print_correct()
         else:
