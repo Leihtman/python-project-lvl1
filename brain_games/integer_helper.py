@@ -54,3 +54,14 @@ def give_list_with_hided_number(
     list_for_hiding: list[int | str] = numbers_list.copy()
     list_for_hiding[position_to_hide] = mask_value
     return list_for_hiding
+
+
+def is_prime(number: int) -> bool:
+    if number <= 1:
+        return False
+
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True

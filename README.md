@@ -21,4 +21,10 @@
 
 [asciinema brain-progression Failed Play](https://asciinema.org/a/VZnXYdNQ26mcFJGN)
 
+[asciinema brain-prime Succes Play 1](https://asciinema.org/a/XRzsqNLTvWqL2IWM)
+
+[asciinema brain-prime Succes Play 2](https://asciinema.org/a/Jyhvjdo69DPJDDSN)
+
+[asciinema brain-prime Failed play](https://asciinema.org/a/znkI6oVCl8P5nXc6)
+
 
