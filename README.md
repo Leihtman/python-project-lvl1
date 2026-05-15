@@ -17,8 +17,8 @@
 
 [asciinema brain-gcd Failed Play](https://asciinema.org/a/9LHPpmiLqPdzZMJr)
 
-[asciinema brain-progression Succes Play](https://asciinema.org/a/SjkMpy8TgeAzWiCT)
+[asciinema brain-progression Succes Play](https://asciinema.org/a/mu0tJbujNsRufsvS)
 
-[asciinema brain-progression Failed Play](https://asciinema.org/a/G8eEphkQt1GNiFqO)
+[asciinema brain-progression Failed Play](https://asciinema.org/a/VZnXYdNQ26mcFJGN)
 
 
