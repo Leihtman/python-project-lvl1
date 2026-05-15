@@ -24,7 +24,7 @@ def main():
     correct_attempts_to_win = 3
 
     while correct_attempts_to_win > 0:
-        random_number = random.randint(1, 100)
+        random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
 
         print_question(f"{random_number}")
         player_answer = request_user_answer()

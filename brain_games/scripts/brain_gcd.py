@@ -8,28 +8,26 @@ from brain_games.cli import (
     welcome_and_give_name,
     wrong_answer_feedback,
 )
-from brain_games.integer_helper import calc
+from brain_games.integer_helper import find_greatest_common_divisor
 
-MIN_NUMBER = 1
-MAX_NUMBER = 25
-OPERATORS = ["+", "-", "*"]
+MIN_NUMBER = 0
+MAX_NUMBER = 100
 
 
 def main():
     player_name = welcome_and_give_name()
-    print("What is the result of the expression?")
+    print("Find the greatest common divisor of given numbers.")
     correct_attempts_to_win = 3
 
     while correct_attempts_to_win > 0:
-        operand_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
-        operand_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-        operator = OPERATORS[random.randint(0, 2)]
-        expression = f"{operand_1} {operator} {operand_2}"
+        number_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+        number_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+        expression = f"{number_1} {number_2}"
 
         print_question(expression)
 
         player_answer = request_user_answer()
-        correct_answer = calc(operator, operand_1, operand_2)
+        correct_answer = find_greatest_common_divisor(number_1, number_2)
 
         if player_answer == str(correct_answer):
             correct_attempts_to_win -= 1
