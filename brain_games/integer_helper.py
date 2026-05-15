@@ -35,3 +35,22 @@ def find_greatest_common_divisor(number_1: int, number_2: int) -> int:
 
         if max_number % greatest_divisor == 0 and min_number % greatest_divisor == 0:
             return greatest_divisor
+
+
+def make_arithmetic_progression(first_number, step, numbers_count) -> list[int]:
+    result = [first_number]
+    current_value = first_number
+
+    for _ in range(numbers_count - 1):
+        current_value += step
+        result.append(current_value)
+
+    return result
+
+
+def give_list_with_hided_number(
+    numbers_list: list[int], position_to_hide: int, mask_value: str
+) -> list[int | str]:
+    list_for_hiding: list[int | str] = numbers_list.copy()
+    list_for_hiding[position_to_hide] = mask_value
+    return list_for_hiding
